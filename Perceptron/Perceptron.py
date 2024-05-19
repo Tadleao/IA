@@ -140,11 +140,9 @@ class Perceptron:
         return 1 if self.somar(amostra)> 0 else 0
         
 y = Perceptron(entradas = 2, epocas = 5)
-x = [[0,0],[0,1],[1,0], [1,1]]
-z = [0,1,1,1]
-s = bin(1)[2:]
 y.trainBool(5)
-print(y.predict([0,0]))
-print(y.predict([0,1]))
-print(y.predict([1,0]))
-print(y.predict([1,1]))
+print("Teste XOR")
+print("[0,0] -> Saida: ", y.predict([0,0]))
+print("[0,1] -> Saida: ", y.predict([0,1]))
+print("[1,0] -> Saida: ", y.predict([1,0]))
+print("[1,1] -> Saida: ", y.predict([1,1]))

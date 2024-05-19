@@ -55,12 +55,12 @@ class NeuralNetwork:
 				print(f"Epoch {epoch}, Loss:{loss}")
 
 X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
-y = np.array([[0], [1], [1], [0]])
+y = np.array([[0], [0], [0], [1]])
 
 nn = NeuralNetwork(input_size=2, hidden_size=4, output_size=1)
 nn.train(X, y, epochs=10000, learning_rate=0.1)
 
 # Test the trained model
 output = nn.feedforward(X)
-print("Predictions after training:")
+print("AND:")
 print(output)
