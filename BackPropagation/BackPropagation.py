@@ -96,7 +96,7 @@ class BackPropagation:
                             pos+=1
                     else:
                         for k in range(self.camadas[j]):
-                            for x in range(self.camadas[j-1]):                            
+                            for x in range(self.camadas[j-1]):                           
                                 self.neuronios[pos].entrada.append(self.neuronios[x].saida)
                             self.neuronios[pos].entrada.append(1)
                             self.neuronios[pos].calcSaida(self.neuronios[pos].entrada)
@@ -127,7 +127,7 @@ class BackPropagation:
         return saida
         
 
-x = BackPropagation(epocas=10000,camadas = [1,1])
+x = BackPropagation(epocas=1000,camadas = [1,1])
 x.train([[0,0],[0,1],[1,0],[1,1]],[0,1,1,0])
 # for i in range(len(x.neuronios)):
 #     print(x.neuronios[i].entrada)
